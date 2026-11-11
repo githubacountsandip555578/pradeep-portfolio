@@ -1,0 +1,1241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080914">
+<meta name="description" content="Video Editing, Data Entry, Graphic Design and Website Development Services">
+<title>Creative Studio | Digital Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#080914;
+  --card:#14162a;
+  --text:#ffffff;
+  --muted:#a8abc2;
+  --purple:#9b6cff;
+  --pink:#ed69d7;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body {
+  background:var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  width:90%;
+  max-width:1160px;
+  margin:auto;
+}
+
+section {
+  padding:90px 0;
+}
+
+h1,h2,h3 {
+  font-family:"Outfit",sans-serif;
+}
+
+.gradient {
+  background:linear-gradient(100deg,#b28aff,#ed69d7,#65d8ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.section-title {
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2 {
+  font-size:clamp(30px,5vw,46px);
+  margin:15px 0;
+}
+
+.section-title p {
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.tag {
+  display:inline-block;
+  padding:9px 16px;
+  border:1px solid #9b6cff80;
+  border-radius:30px;
+  color:#d6c4ff;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+/* NAVBAR */
+
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:#080914ed;
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #ffffff15;
+}
+
+nav {
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  font-family:"Outfit";
+  font-size:23px;
+  font-weight:800;
+}
+
+.logo span {
+  color:var(--purple);
+}
+
+.nav-links {
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+.nav-links a {
+  font-size:13px;
+  color:#c7c8d8;
+  transition:.3s;
+}
+
+.nav-links a:hover {
+  color:#c28aff;
+}
+
+.nav-btn,.btn {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:13px 22px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:13px;
+  transition:.3s;
+}
+
+.nav-btn,.btn-primary {
+  background:linear-gradient(100deg,#8652f5,#d34bd2);
+  color:white;
+  box-shadow:0 8px 25px #9b6cff40;
+}
+
+.btn-outline {
+  border:1px solid #a77aff;
+  color:white;
+}
+
+.btn:hover,.nav-btn:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px #9b6cff50;
+}
+
+.menu {
+  display:none;
+  border:0;
+  color:white;
+  background:none;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height:740px;
+  display:flex;
+  align-items:center;
+  padding-top:130px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before {
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  right:-100px;
+  top:100px;
+  background:#8d49ff25;
+  filter:blur(100px);
+  border-radius:50%;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+  position:relative;
+}
+
+.hero h1 {
+  font-size:clamp(42px,6vw,74px);
+  line-height:1.05;
+  margin:25px 0;
+}
+
+.hero h2 {
+  font-size:19px;
+  color:#d5d5e6;
+  font-weight:500;
+  margin-bottom:15px;
+}
+
+.hero p {
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
+}
+
+.hero-buttons {
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.hero-photo {
+  min-height:480px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.photo-ring {
+  position:absolute;
+  width:420px;
+  max-width:90%;
+  aspect-ratio:1;
+  border:1px solid #a77aff;
+  border-radius:50%;
+  box-shadow:0 0 70px #9b6cff40;
+  animation:pulse 5s infinite;
+}
+
+.photo-box {
+  position:relative;
+  z-index:2;
+  width:360px;
+  max-width:90%;
+  height:440px;
+  overflow:hidden;
+  border-radius:180px 180px 25px 25px;
+  border:1px solid #a77aff;
+  background:linear-gradient(145deg,#292044,#111324);
+  box-shadow:0 20px 70px #0008;
+}
+
+.photo-box img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.photo-hint {
+  padding:25px;
+  text-align:center;
+  color:#d4c6ed;
+  line-height:1.7;
+}
+
+.float-box {
+  position:absolute;
+  z-index:3;
+  background:#17182d;
+  border:1px solid #ffffff25;
+  border-radius:12px;
+  padding:12px 16px;
+  font-size:12px;
+  animation:float 4s infinite;
+}
+
+.float-one {
+  left:0;
+  top:80px;
+}
+
+.float-two {
+  right:0;
+  bottom:70px;
+  animation-delay:2s;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card {
+  background:linear-gradient(145deg,#1b1d35,#101222);
+  border:1px solid #ffffff12;
+  border-radius:20px;
+  padding:25px;
+  transition:.35s;
+}
+
+.card:hover {
+  transform:translateY(-9px);
+  border-color:#9b6cff;
+  box-shadow:0 15px 40px #9b6cff20;
+}
+
+.icon {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:#9b6cff25;
+  color:#d3b5ff;
+  font-size:25px;
+  margin-bottom:20px;
+}
+
+.card h3 {
+  font-size:19px;
+  margin-bottom:12px;
+}
+
+.card p {
+  font-size:13px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+.card small {
+  display:block;
+  margin-top:17px;
+  color:#c5a2ff;
+}
+
+/* WEBSITE TYPES */
+
+.website-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.website-card {
+  min-height:210px;
+}
+
+.website-card h3 {
+  font-size:18px;
+}
+
+.website-card a {
+  display:inline-block;
+  margin-top:17px;
+  color:#c6a3ff;
+  font-size:13px;
+  font-weight:bold;
+}
+
+/* PROCESS */
+
+.process-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.process-card {
+  background:#ffffff08;
+  padding:25px;
+  border-top:1px solid #a77aff;
+  border-radius:0 0 15px 15px;
+}
+
+.step {
+  font-size:30px;
+  color:#bb9aff;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.process-card h3 {
+  margin-bottom:10px;
+  font-size:17px;
+}
+
+.process-card p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* TEAM */
+
+.team-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  max-width:800px;
+  margin:auto;
+}
+
+.team-card {
+  text-align:center;
+}
+
+.team-photo {
+  height:145px;
+  width:145px;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid #a77aff;
+  margin:0 auto 20px;
+  background:#292044;
+  display:grid;
+  place-items:center;
+  color:#c7b1f8;
+}
+
+.team-photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.team-card h3 {
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.team-card .role {
+  color:#c5a6ff;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.team-card p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact-box {
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:35px;
+  padding:35px;
+  border:1px solid #ffffff20;
+  border-radius:25px;
+  background:linear-gradient(135deg,#211c3b,#111324);
+}
+
+.contact-info h3 {
+  font-size:30px;
+  margin:18px 0;
+}
+
+.contact-info p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.contact-details {
+  display:grid;
+  gap:16px;
+  margin-top:25px;
+  font-size:13px;
+  color:#e3dff0;
+}
+
+.contact-form {
+  display:grid;
+  gap:13px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width:100%;
+  padding:15px;
+  background:#080914;
+  color:white;
+  border:1px solid #ffffff20;
+  border-radius:12px;
+  outline:none;
+  font-family:inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color:#9b6cff;
+}
+
+.contact-form select option {
+  background:#14162a;
+}
+
+.contact-form textarea {
+  height:120px;
+  resize:vertical;
+}
+
+.contact-form button {
+  border:0;
+  cursor:pointer;
+}
+
+.contact-form small {
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* FOOTER */
+
+footer {
+  padding:30px 0;
+  text-align:center;
+  color:#9294a9;
+  font-size:12px;
+  border-top:1px solid #ffffff15;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#20c875;
+  color:#062414;
+  font-size:27px;
+  box-shadow:0 8px 25px #20c87555;
+  transition:.3s;
+}
+
+.whatsapp:hover {
+  transform:scale(1.1);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .8s,transform .8s;
+}
+
+.reveal.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-13px); }
+}
+
+@keyframes pulse {
+  0%,100% { transform:scale(1); }
+  50% { transform:scale(1.05); }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:950px) {
+  .services-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .process-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:760px) {
+  .menu {
+    display:block;
+  }
+
+  .nav-btn {
+    display:none;
+  }
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    padding:25px 5%;
+    background:#101222;
+    flex-direction:column;
+    gap:22px;
+    border-bottom:1px solid #ffffff20;
+  }
+
+  .nav-links.active {
+    display:flex;
+  }
+
+  .hero {
+    padding:120px 0 60px;
+    min-height:auto;
+  }
+
+  .hero-grid {
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-buttons {
+    justify-content:center;
+  }
+
+  .hero-photo {
+    min-height:420px;
+    margin-top:20px;
+  }
+
+  .photo-box {
+    height:370px;
+    width:300px;
+  }
+
+  .photo-ring {
+    width:340px;
+  }
+
+  .float-one {
+    left:0;
+    top:60px;
+  }
+
+  .float-two {
+    right:0;
+    bottom:40px;
+  }
+
+  .website-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .contact-box {
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:480px) {
+  .container {
+    width:92%;
+  }
+
+  section {
+    padding:70px 0;
+  }
+
+  .hero h1 {
+    font-size:43px;
+  }
+
+  .hero h2 {
+    font-size:16px;
+  }
+
+  .hero-buttons .btn {
+    width:100%;
+  }
+
+  .services-grid,
+  .website-grid,
+  .process-grid,
+  .team-grid {
+    grid-template-columns:1fr;
+  }
+
+  .contact-box {
+    padding:22px;
+  }
+
+  .photo-box {
+    height:350px;
+    width:280px;
+  }
+
+  .photo-ring {
+    width:310px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+
+  .reveal {
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="container">
+
+<a href="#home" class="logo">CREATIVE<span>.</span>STUDIO</a>
+
+<button class="menu" id="menuBtn">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#websites">Websites</a></li>
+<li><a href="#team">Our Team</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="nav-btn">Let's Talk ↗</a>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="hero-content reveal">
+
+<span class="tag">✦ CREATIVE DIGITAL SERVICES</span>
+
+<h1>
+Ideas That Make Your
+<span class="gradient">Business Stand Out.</span>
+</h1>
+
+<h2>
+Video Editing · Data Entry · Graphic Design · Website Development
+</h2>
+
+<p>
+We help people and businesses build a strong digital presence
+with creative designs, engaging videos and responsive websites.
+From a personal portfolio to a complete business website,
+let's bring your idea online.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#websites" class="btn btn-primary">
+Explore Our Services ↗
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Us
+</a>
+
+</div>
+
+<p style="margin-top:25px;font-size:12px">
+📍 Sohanpur, Deoria, Uttar Pradesh - 274704
+</p>
+
+</div>
+
+<div class="hero-photo reveal">
+
+<div class="photo-ring"></div>
+
+<div class="float-box float-one">
+✦ Creative Design
+</div>
+
+<div class="float-box float-two">
+⌘ Responsive Websites
+</div>
+
+<div class="photo-box">
+
+<!-- Add your main photo as profile.jpg -->
+
+<img src="Professional Portrait with Warm Studio Bokeh (1).png" alt="Our Profile"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<div class="photo-hint" style="display:none">
+<h3>Your Photo Here</h3>
+Add profile.jpg in the same folder.
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="tag">WHAT WE DO</span>
+
+<h2>Our <span class="gradient">Creative Services</span></h2>
+
+<p>Professional digital services for individuals, shops and growing businesses.</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="card reveal">
+<div class="icon">▶</div>
+<h3>Video Editing</h3>
+<p>Professional video editing for YouTube, Instagram reels, promotional videos and social media content.</p>
+<small>Reels · YouTube · Promo Videos</small>
+</div>
+
+<div class="card reveal">
+<div class="icon">▤</div>
+<h3>Data Entry</h3>
+<p>Accurate data entry, PDF to Word, Excel work, document formatting, typing and spreadsheet management.</p>
+<small>Excel · Documents · Typing</small>
+</div>
+
+<div class="card reveal">
+<div class="icon">✎</div>
+<h3>Graphic Design</h3>
+<p>Creative logos, posters, banners, invitations, social media posts and promotional graphics.</p>
+<small>Logo · Poster · Social Media</small>
+</div>
+
+<div class="card reveal">
+<div class="icon">⌘</div>
+<h3>Website Development</h3>
+<p>Modern, mobile-friendly and professional websites for businesses, shops and personal portfolios.</p>
+<small>Responsive · Modern · Professional</small>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- WEBSITE TYPES -->
+
+<section id="websites">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="tag">WEBSITE SOLUTIONS</span>
+
+<h2>Types Of <span class="gradient">Websites We Build</span></h2>
+
+<p>We create different types of websites according to your business and requirements.</p>
+
+</div>
+
+<div class="website-grid">
+
+<div class="card website-card reveal">
+<div class="icon">🏢</div>
+<h3>Business Website</h3>
+<p>Professional website for companies, businesses and organizations.</p>
+<a href="#contact" data-service="Business Website">Enquire Now ↗</a>
+</div>
+
+<div class="card website-card reveal">
+<div class="icon">💍</div>
+<h3>Wedding & Photography</h3>
+<p>Wedding photo galleries, event portfolios and photography websites.</p>
+<a href="#contact" data-service="Wedding and Photography Website">Enquire Now ↗</a>
+</div>
+
+<div class="card website-card reveal">
+<div class="icon">🛍️</div>
+<h3>Shop & Showroom</h3>
+<p>Product display, shop details, offers, location and customer enquiries.</p>
+<a href="#contact" data-service="Shop and Showroom Website">Enquire Now ↗</a>
+</div>
+
+<div class="card website-card reveal">
+<div class="icon">👤</div>
+<h3>Portfolio Website</h3>
+<p>Personal portfolio to showcase your skills, projects and experience.</p>
+<a href="#contact" data-service="Portfolio Website">Enquire Now ↗</a>
+</div>
+
+<div class="card website-card reveal">
+<div class="icon">📅</div>
+<h3>Online Service Booking</h3>
+<p>Appointment requests, booking enquiries and service details.</p>
+<a href="#contact" data-service="Online Service Booking Website">Enquire Now ↗</a>
+</div>
+
+<div class="card website-card reveal">
+<div class="icon">🍽️</div>
+<h3>Restaurant & Cafe</h3>
+<p>Food menu, restaurant gallery, location and customer enquiries.</p>
+<a href="#contact" data-service="Restaurant and Cafe Website">Enquire Now ↗</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- WORK PROCESS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+<span class="tag">OUR PROCESS</span>
+<h2>How We <span class="gradient">Work</span></h2>
+<p>From your idea to the final project.</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card reveal">
+<div class="step">01</div>
+<h3>Share Your Idea</h3>
+<p>Tell us about your project and requirements.</p>
+</div>
+
+<div class="process-card reveal">
+<div class="step">02</div>
+<h3>Plan & Design</h3>
+<p>We discuss design, features and project details.</p>
+</div>
+
+<div class="process-card reveal">
+<div class="step">03</div>
+<h3>Build & Review</h3>
+<p>We prepare the work and take your feedback.</p>
+</div>
+
+<div class="process-card reveal">
+<div class="step">04</div>
+<h3>Final Delivery</h3>
+<p>We deliver the agreed final project.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- OUR TEAM -->
+
+<section id="team">
+
+<div class="container">
+
+<div class="section-title reveal">
+<span class="tag">MEET THE TEAM</span>
+<h2>Our <span class="gradient">Developers</span></h2>
+<p>Meet the creative people behind our work.</p>
+</div>
+
+<div class="team-grid">
+
+<div class="card team-card reveal">
+
+<div class="team-photo">
+
+<img src="Professional Portrait with Warm Studio Bokeh (1).png" alt="Developer One"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<span style="display:none">Photo 1</span>
+
+</div>
+
+<h3>PRADEEP KUMAR PRAJAPATI</h3>
+<div class="role">Video Editing/ Creative Designer</div>
+<p>Write your introduction and skills here.</p>
+
+</div>
+
+<div class="card team-card reveal">
+
+<div class="team-photo">
+
+<img src="WhatsApp Image 2026-01-30 at 11.34.55 AM.jpeg" alt="Developer Two"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<span style="display:none">Photo 2</span>
+
+
+</div>
+
+<h3>SANDIP KUMAR PRAJAPATI</h3>
+<div class="role">Web Developer / Graphic Designer</div>
+<p>Write your introduction and skills here.</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box reveal">
+
+<div class="contact-info">
+
+<span class="tag">CONTACT US</span>
+
+<h3>
+Have A Project In Mind?
+<span class="gradient">Let's Talk.</span>
+</h3>
+
+<p>
+Tell us about your project. Contact us by phone,
+email or WhatsApp to discuss your requirements.
+</p>
+
+<div class="contact-details">
+
+<a href="tel:+919919713392">
+📞 +91 99197 13392
+</a>
+
+<a href="mailto:sandip9517182047@gmail.com">
+✉ sandip9517182047@gmail.com
+</a>
+
+<div>
+📍 Sohanpur, Deoria, Uttar Pradesh - 274704
+</div>
+
+</div>
+
+</div>
+
+<form class="contact-form" id="contactForm">
+
+<input type="text" id="name"
+placeholder="Your Name" required>
+
+<input type="tel" id="phone"
+placeholder="Your Mobile Number">
+
+<select id="service" required>
+<option value="">Select Your Service</option>
+<option>Video Editing</option>
+<option>Data Entry</option>
+<option>Graphic Design</option>
+<option>Website Development</option>
+<option>Business Website</option>
+<option>Wedding and Photography Website</option>
+<option>Shop and Showroom Website</option>
+<option>Portfolio Website</option>
+<option>Online Service Booking Website</option>
+<option>Restaurant and Cafe Website</option>
+<option>Other</option>
+</select>
+
+<textarea id="message"
+placeholder="Tell us about your project..." required></textarea>
+
+<button type="submit" class="btn btn-primary">
+Send Enquiry on WhatsApp ↗
+</button>
+
+<small>
+Your enquiry will open in WhatsApp. This form does not store data.
+</small>
+
+</form>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+© <span id="year"></span> Creative Studio. All Rights Reserved.
+<br><br>
+Sohanpur, Deoria, Uttar Pradesh - 274704
+</div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<a class="whatsapp"
+href="https://wa.me/919919713392"
+target="_blank"
+rel="noopener">
+✆
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE MENU
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",function(){
+
+navLinks.classList.toggle("active");
+
+menuBtn.textContent =
+navLinks.classList.contains("active") ? "×" : "☰";
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navLinks.classList.remove("active");
+menuBtn.textContent="☰";
+
+});
+
+});
+
+// SCROLL ANIMATION
+
+const observer = new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(function(element){
+
+observer.observe(element);
+
+});
+
+// SERVICE AUTO SELECT
+
+document.querySelectorAll("[data-service]").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document.getElementById("service").value =
+link.getAttribute("data-service");
+
+});
+
+});
+
+// WHATSAPP CONTACT FORM
+
+document.getElementById("contactForm")
+.addEventListener("submit",function(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value.trim();
+
+const phone =
+document.getElementById("phone").value.trim();
+
+const service =
+document.getElementById("service").value;
+
+const message =
+document.getElementById("message").value.trim();
+
+const text =
+"Hello, my name is "+name+
+"\nService: "+service+
+"\nPhone: "+(phone || "Not provided")+
+"\nProject Details: "+message;
+
+const url =
+"https://wa.me/919919713392?text="+
+encodeURIComponent(text);
+
+window.open(url,"_blank");
+
+});
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
